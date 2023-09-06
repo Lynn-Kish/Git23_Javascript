@@ -9,7 +9,7 @@
     <p>Rock-Paper-scissors</p>
 
     <button onclick="
-    let computerMove ='';
+    const computerMove = pickComputerMove();
     
 
       let result = '';
@@ -26,7 +26,7 @@
     ">Rock</button>
 
     <button onclick="
-    let computerMove ='';
+    const computerMove = pickComputerMove();
 
       let result = '';
 
@@ -42,7 +42,7 @@
     ">Paper</button>
 
     <button onclick="
-     pickComputerMove();
+    const computerMove = pickComputerMove();
 
       let result = '';
 
@@ -70,6 +70,8 @@
         } else if(randomNumber >= 2/3 && randomNumber < 1) {
           computerMove= 'Scissors';
         }
+
+        return computerMove;  // returning a value out of a function 
        }
     </script>
 </body>
