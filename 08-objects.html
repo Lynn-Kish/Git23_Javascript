@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+   <script>
+    /*
+    const product ={
+        name: 'socks',
+        price: 1090
+    };
+    console.log(product);
+    console.log(product.name);
+    console.log(product.price);
+
+
+    product.name = 'cotton socks';
+    console.log(product);
+
+    product.newProperty = true;
+    console.log(product);
+
+    delete product.newProperty;
+    console.log(product);
+*/
+    const product2 ={
+        name: 'shirt',
+        'delivery-time': '1 day',
+        rating:{
+            stars : 4.5,
+            count : 87
+        },
+        fun: function function1() {
+            console.log('function inside object');
+        }
+
+    };
+
+
+    console.log(product2);
+    console.log(product2.name);
+    console.log(product2['name']);
+    console.log(product2['delivery-time']);
+
+    console.log(product2.rating.count);
+    product2.fun();
+
+    // JSON METHOD
+    console.log(JSON.stringify(product2));
+
+    const jsonString= JSON.stringify(product2);
+    console.log(JSON.parse(jsonString));
+
+/*
+    const house ={
+        chairs: '20',
+        beds: 4,
+        spoons: 34
+    };
+
+    console.log(house);
+
+    // 3 ways to create an object in javascript
+
+    var student ={
+        name : "luna",
+        age : 21,
+        studies: "IT"
+    };
+
+    console.log(student); // literally
+
+ 
+        
+    var student= new Object();
+    student.name= 'luna',
+    student.age= 21,
+    student.studies='IT';
+
+    console.log(student); // new Object
+   
+
+    function stud(name,age,studies){
+        this.name=name;
+        this.age=age;
+        this.studies=studies;
+    }
+
+    console.log(student); //use an object constructor
+*/
+    
+   </script>
+</body>
+</html>
