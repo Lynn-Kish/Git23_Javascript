@@ -8,10 +8,30 @@
 <body>
 
     <button>hello!</button>
+    <button class="js">second button</button>
     <script>
+
+        console.log(document.querySelector('button').
+         innerHTML);
+        document.querySelector('button').
+         innerHTML= 'changed';
+
+       const buttonElement= document.querySelector('.js');
+        console.log(buttonElement);
+        /*
        document.body.innerHTML = 'hello!';
        document.title= 'TheMoon';
+           */
+        /*
+           console.log(document.title);
+           document.title= 'changed title';
 
+           console.log(document.body);
+           console.log(typeof document.body);
+
+           console.log(document.body.innerHTML);
+           document.body.innerHTML ='changed body';
+           */
     </script>
 </body>
 </html>
