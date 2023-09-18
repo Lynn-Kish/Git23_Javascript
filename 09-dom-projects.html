@@ -26,20 +26,21 @@
         <script>
 
             function handleCostKeydown(event){
-                if(event.kye=== 'enter'){
+                if(event.key=== 'Enter'){
                     calculateTotal();
                 }
             }
 
-            function calculationTotal(){
+            function calculateTotal(){
                const inputElement= document.querySelector('.cost-input');
                let cost = Number(inputElement.value); 
                
                if(cost <40){
-                    cost =cost +10;
+                     cost =cost +10;
                }
 
-                document.querySelector('.total-cost').innerHTML=`$${cost}`;
+                document.querySelector('.total-cost')
+                    .innerHTML=`$${cost}`;
             }
 
             function Subscribe() {
