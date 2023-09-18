@@ -12,16 +12,32 @@
         .sub-button{
             background-color: black;
             color: white;
-            padding: 10px 15px 10px 15px;
+            padding: 10px 15px ;
             font-weight: bold;
             border-radius: 50px;
             cursor: pointer;
             border: none;
+            margin-bottom: 30px;
         }
 
         .is-subscribed{
             background-color: rgb(240, 240, 240);
             color: black;
+        }
+
+        .cost-p{
+            font-size: 15px;
+            padding: 10px ;
+
+        }
+
+        .calc-button{
+            background-color: green;
+            color: white;
+            border: none;
+            font-size: 15px;
+            padding: 12px 15px;
+            color: pointer;
         }
     </style>
 </head>
@@ -34,12 +50,12 @@
         <p>Amazon Shipping Calculator</p>
 
         <input placeholder="cost of order" 
-        class="cost-input" onkeydown=" 
+        class="cost-input cost-p" onkeydown=" 
             handleCostKeydown(event);
         ">
         <button onclick="
             calculateTotal();
-        ">Calculate</button> 
+        " class="calc-button">Calculate</button> 
 
         <p class="total-cost"></p>
 
