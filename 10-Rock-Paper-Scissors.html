@@ -17,9 +17,36 @@
       }
 
       .move-icon{
-        background-color: transparent;
+        height: 50px;
       }
 
+      .move-button{
+        background-color: transparent;
+        border: 3px solid white;
+        height: 120px;
+        width: 120px;
+        border-radius: 60px;
+        margin-right: 10px;
+        cursor: pointer;
+      }
+
+      .result{
+        font-size: 25px;
+        font-weight: bold;
+        margin-top: 50px;
+      }
+      
+      .score{
+        margin-top: 60px;
+      }
+
+      .rest-button{
+        background-color: white;
+        border: none;
+        font-size: 15px;
+        padding: 8px 15px;
+        cursor: pointer;
+      }
     </style>
 </head>
 <body>
@@ -27,25 +54,25 @@
 
     <button onclick="
     playGame('rock');
-    ">
+    " class="move-button">
     <img src="images/rock.png" class="move-icon">
   </button>
 
     <button onclick="
       playGame('paper');
-    ">
+    " class="move-button">
     <img src="images/paper.png" class="move-icon">
     </button>
 
     <button onclick="
       playGame('scissors');
-    ">
-    <img src="images/scissors.jpg" class="move-icon">
+    " class="move-button">
+    <img src="images/scissors.jpg" class="move-icon"> 
     </button>
 
-    <p class="js-score"></p>
-    <p class="js-result"></p>
+    <p class="js-result result" ></p>
     <p class="js-moves"></p>
+    <p class="js-score score"></p>
 
 
     <button onclick="
@@ -54,7 +81,7 @@
       score.ties = 0;
       localStorage.removeItem('score');
       updateScoreElement();
-    ">Reset Score</button>
+    " class="rest-button">Reset Score</button>
  
     <script>
 
@@ -126,7 +153,10 @@
          .innerHTML= result;
 
          document.querySelector('.js-moves')
-            .innerHTML=`You ${playerMove} - ${computerMove} computer`;
+            .innerHTML=`You
+            <img src="images/${playerMove}.png" class="move-icon">
+            <img src="images/${computerMove}.jpg" class="move-icon">
+            computer`;
 
       }
       
